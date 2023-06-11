@@ -6,10 +6,10 @@
 
 // alert(`Результат сложения чисел ${num1} и ${num2} равен ${num1 + num2}.`);
 
-// const num1 = Number.parseFloat(prompt('Введите первое число:'));
-// const num2 = Number.parseFloat(prompt('Введите второе число:'));
+const num1 = Number.parseFloat(prompt('Введите первое число:'));
+const num2 = Number.parseFloat(prompt('Введите второе число:'));
 
-// alert(`Результат сложения чисел ${num1} и ${num2} равен ${num1 + num2}.`);
+alert(`Результат сложения чисел ${num1} и ${num2} равен ${num1 + num2}.`);
 
 // напишем функцию
 
@@ -81,20 +81,20 @@
 // console.log(getMaxEvenElement([4, -12, 29, 6, 31, 92, -50])); // 31
 
 // 2й вариант
-function getMaxEvenElement(arr) {
-  let maxnum = arr[0];
+// function getMaxEvenElement(arr) {
+//   let maxnum = arr[0];
 
-  for (let i = 2; i < arr.length; i += 2) {
-    if (arr[i] > maxnum) {
-      maxnum = arr[i];
-    }
-  }
-  return maxnum;
-}
+//   for (let i = 2; i < arr.length; i += 2) {
+//     if (arr[i] > maxnum) {
+//       maxnum = arr[i];
+//     }
+//   }
+//   return maxnum;
+// }
 
-console.log(getMaxEvenElement([5, 7, -1, 12, 3, 0])); // 5
-console.log(getMaxEvenElement([4, -12, 29, 6, 31, 92, -50])); // 31
-console.log(getMaxEvenElement([-4, -12, -29, -6, -31, -92, -50])); //-4
+// console.log(getMaxEvenElement([5, 7, -1, 12, 3, 0])); // 5
+// console.log(getMaxEvenElement([4, -12, 29, 6, 31, 92, -50])); // 31
+// console.log(getMaxEvenElement([-4, -12, -29, -6, -31, -92, -50])); //-4
 
 /*
 Задача с реального собеседования.
@@ -104,20 +104,20 @@ console.log(getMaxEvenElement([-4, -12, -29, -6, -31, -92, -50])); //-4
 ценами [p1, ..., pn]. Покупатель хочет полностью использовать свой 
 бюджет. Необходимо выяснить получится ли это.
 */
-function f(clockArr, money) {
-  let n = clockArr.length;
-  for (let i = 0; i < n - 1; i++) {
-      for (let j = i + 1; j < n; j++) {
-          const sum = clockArr[j] + clockArr[i];
-          if ((Math.round(sum * 100) / 100) == money) {
-              return true;
-          }
-      }
-  }
-  return false;
-}
-console.log(f([54.10, 35.20], 89.3)); // true
-console.log(f([8.74, 3.12, 9.50, 2.35], 2.35)); // false
-console.log(f([1.1, 4.2, 7.5, 0.4], 8.4)); // false
-console.log(f([54.10, 20.00, 18.51, 97.75, 35.20, 76.42], 89.3)); // true
-console.log(f([20, 80, 4, 60, 70, 23], 100));
+// function f(clockArr, money) {
+//   let n = clockArr.length;
+//   for (let i = 0; i < n - 1; i++) {
+//       for (let j = i + 1; j < n; j++) {
+//           const sum = clockArr[j] + clockArr[i];
+//           if ((Math.round(sum * 100) / 100) == money) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// }
+// console.log(f([54.10, 35.20], 89.3)); // true
+// console.log(f([8.74, 3.12, 9.50, 2.35], 2.35)); // false
+// console.log(f([1.1, 4.2, 7.5, 0.4], 8.4)); // false
+// console.log(f([54.10, 20.00, 18.51, 97.75, 35.20, 76.42], 89.3)); // true
+// console.log(f([20, 80, 4, 60, 70, 23], 100));
