@@ -14,9 +14,9 @@
 
 function greeting() {
   let name = prompt('Введите, пожалуйста, своё имя: ');
-  msg = `Привет, ${name}!!`
-  alert(msg)
-};
+  let msg = `Привет, ${name}!!`;
+  alert(msg);
+}
 
 greeting();
 console.log(msg);
