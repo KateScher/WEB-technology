@@ -1,0 +1,198 @@
+<!-- 1. Вставьте HTML-разметку в онлайн-редактор: https://pastebin.com/H4rsjsNa
+2. Создайте в самом начале php-файла (до тега DOCTYPE) переменные: имя, профессия, город/страна, e-mail, телефон. ЗАдайте начальные значения переменным.
+3. В блоке контактной информации вместо текста в строках имя, профессия, город/страна, e-mail, телефон вставьте значения из переменных, которые создавали выше.
+Пример:
+Было: https://disk.yandex.ru/i/At2HXrdM0eDzTg
+Стало: https://disk.yandex.ru/i/IZ1LuentvV5Csg -->
+
+<?php
+// Your code here!
+$name = 'Andrey';
+$profession ="крановщик";
+$city = "Тюмень";
+$email = "cat@mail.ru";
+$phone = '89123548596';
+$skills = [
+    [
+        'name' => 'Фотошоп',
+        'percent' => 30,
+    ],
+    [
+        'name' => 'Иллюстратор',
+        'percent' => 70,
+    ],
+    [
+        'name' => 'Медиа',
+        'percent' => 40,
+    ],
+];
+?>
+<!DOCTYPE html>
+<html>
+<заголовок>
+  <title>Мое резюме</title>
+  <мета кодировка="UTF-8">
+  <мета название="окно просмотра" содержимого="width=ширина устройства, начальный масштаб=1">
+  <ссылка rel="таблица стилей" href="https://www.w3schools.com/w3css/4/w3.css ">
+  <link rel="предварительное подключение" href="https://fonts.googleapis.com ">
+  <link rel="предварительное подключение" href="https://fonts.gstatic.com " перекрестный источник>
+  <ссылка href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap " rel="таблица стилей">
+  <link rel="таблица стилей" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <стиль>
+ HTML,
+ Тело,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ семейство шрифтов: 'Jost', без засечек;
+    }
+  </стиль>
+</head>
+<класс тела ="w3-светло-серый">
+  <!-- Контейнер страницы -->
+  <div class="w3-content w3-margin-top" style="максимальная ширина: 1400 пикселей;">
+    <!-- Сетка -->
+    <div class="заполнение w3-row">
+      <!-- Левый столбец -->
+      <div class="w3-третий">
+        <div class="w3-белый w3-текст-серый w3-карточка-4">
+          <div class="w3-display-container">
+            <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp "
+              "Аватар"=alt "ширина:100%"=стиль>
+            <div class="w3-display-bottomleft w3-контейнер w3-текст-черный">
+              <h2><?php echo $name;?></h2>
+            </div>
+          </div>
+          <div class="w3-контейнер"> 
+            <p><i class="fa fa-портфель fa-fw w3-правое поле w3-большой текст w3-бирюзовый"></i><?php echo $profession;?></p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $city;?></p>
+            <p><i class="fa fa-конверт fa-fw w3-правое поле w3-большой w3-текст-бирюзовый"></i><?php echo $email;?></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $phone;?></p>
+ 
+            <hr>
+ 
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin right w3-text-teal"></i>Навыки</b></p>
+            <?php for ($i = 0; $i < count($skills); $i++) {
+              <p><?php echo $skills[$i]['name'];?></p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-сщтефштук w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills[$i]['percent'];?>%"><?php echo $skills[$i]['percent'];?>%</div>
+              </div>
+              </div>
+            <?php } ?>
+
+            <br>
+ 
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Языки</b>
+            </p>
+            <p>Английский</p>
+            <div class="w3-светло-серый w3-круглый-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="высота: 24px; ширина: 100%"></div>
+            </div>
+            <p>Испанский</p>
+            <div class="w3-светло-серый w3-круглый-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="высота: 24px; ширина: 55%"></div>
+            </div>
+            <p>Немецкий</p>
+            <div class="w3-светло-серый w3-круглый-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 25%"></div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <br>
+        <!-- Конец левого столбца -->
+      </div>
+      <!-- Правый столбец -->
+      <div class="w3-twothird">
+        <div class="w3-контейнер, w3-карточка, w3-белый, w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              "fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"=class></i>Опыт работы</h2>
+          <div class="w3-контейнер">
+            <h5 class="w3-непрозрачность"><b>Разработчик внешнего интерфейса </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-календарь fa-fw w3-правое поле"></i>Январь 2015 - <span
+                "w3-tag w3-teal w3-round"=класс>Текущий</span></h6>
+            <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit
+ sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            <hr>
+          </div>
+          <div class="w3-контейнер">
+            <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+            <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit
+              sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            <hr>
+          </div>
+          <div class="w3-контейнер">
+            <h5 class="w3-непрозрачность"><b>Графический дизайнер / designsomething.com </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Июнь 2010 - март 2012</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+          </div>
+        </div>
+ 
+        <div class="w3-контейнер w3-карта w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              "fa fa-сертификат fa-fw w3-правое поле w3-xxlarge w3-текст-бирюзовый"=class>/i>Образование</h2>
+          <div class="w3-контейнер">
+            <h5 class="w3-непрозрачность"><b>gb.ru </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Навсегда</h6>
+            <p>Веб-разработка! Все, что мне нужно знать, в одном месте</p>
+            <hr>
+          </div>
+          <div class="w3-контейнер">
+            <h5 class="w3-непрозрачность"><b>Лондонская школа бизнеса</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
+            <p>Степень магистра</p>
+            <hr>
+          </div>
+          <div class="w3-контейнер">
+            <h5 class="w3-непрозрачность"><b>Школа кодирования</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010-2013</h6>
+            <p>Степень бакалавра</> и т. Д.
+          </div>
+        </div>
+        <!-- Конец правого столбца -->
+      </div>
+      <!-- Конечная сетка -->
+    </div>
+    <!-- Контейнер конечной страницы -->
+  </div>
+  <!-- Нижний колонтитул -->
+  <класс="w3-контейнер w3-бирюзовый w3-центр w3-margin-top">
+    <p>Найдите меня в социальных сетях.</p>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <!-- Нижний колонтитул в конце -->
+  </нижний колонтитул>
+</тело>
+</html>
+
+     
+<!-- Продолжаем работать в том же файле с первого задания. 
+ 
+     
+Продолжаем работать в том же файле с первого задания.
+ 
+1. Необходимо сформировать массив с данными для блока "Навыки", массив должен содержать значения навыков и процент владения ими. Пример массива:
+$skills = [
+    [
+        'name' => 'Фотошоп',
+        'percent' => 30,
+    ],
+    [
+        'name' => 'Иллюстратор',
+        'percent' => 70,
+    ],
+    [
+        'name' => 'Медиа',
+        'percent' => 40,
+    ],
+];
+2. Вывести данные из массива на страницу.
+ 
+Пример:
+Было: https://disk.yandex.ru/i/sW8bid6YRbetCw
+Стало: https://disk.yandex.ru/i/5L6HEgAFLRrUFQ
